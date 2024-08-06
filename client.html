@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Socket.IO Chat</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0fff0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #333333;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #333333;
+    }
+
+    .text_field {
+      width: calc(100% - 22px);
+      padding: 10px;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+    }
+
+    .button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #4caf50;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: #45a049;
+    }
+
+    #messages {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    #messages li {
+      padding: 10px 20px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    #messages li:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    #messages li:last-child {
+      border-bottom: none;
+    }
+
+    input[type="text"] {
+      width: calc(100% - 80px);
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+
+    input[type="button"] {
+      width: 70px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h2>Team 01 : Broadcast Chat</h2>
+      <ul id="messages"></ul>
+      <input type="text" id="message" placeholder="Type your message...">
+      <input type="button" value="Send" onclick="sendMessage()">
+    </div>
+  </div>
+
+<script src="/socket.io/socket.io.js"></script>
+  <script>
+    var socket = io();
+
+    function sendMessage() {
+      var message = document.getElementById('message').value;
+      if (message.trim() !== '') {
+        socket.emit('message', message);
+        document.getElementById('message').value = '';
+      }
+    }
+
+    socket.on('message', function(msg) {
+      var li = document.createElement('li');
+      li.textContent = msg;
+      document.getElementById('messages').appendChild(li);
+    });
+  </script>
+</body>
+</html>

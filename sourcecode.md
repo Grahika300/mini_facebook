@@ -1,249 +1,7 @@
-# WAPH-Web Application Programming and Hacking
-
-## Instructor: Dr. Phu Phung
-
-# Project Title: MiniFacebook
-
-# Team members
-
-1. Tulasiram Nakkanaboina,   nakkantm@mail.uc.edu
-2. Vihasith Rasala,          rasalavh@mail.uc.edu
-3. Grahika Rampudi,          rampudga@mail.uc.edu
-4. Sai Sandeep Pasham,       pashamsp@mail.uc.edu
-
-# Project Management Information
-
-Source code repository (private access): [Click_here](https://github.com/waph-team01/waph-teamproject)
-
-Project homepage (public): [Click_here](https://github.com/waph-team01/waph-team01.github.io)
-
-Project homepage (public) & video demonstration: [waph-team01.github.io](https://waph-team01.github.io)
-
-Video demonstration URL : [TEAM 01 Presentation](https://youtu.be/d_vzkgTSeMY)
-## Revision History
-
-| Date       |   Version     |  Description     |
-|------------|:-------------:|-------------:    |
-| 26/03/2024 |  0.0          | Init draft       |
-| 31/03/2024 |  0.1          | Drafting template|
-| 04/01/2024 |  1.0          |  Sprint 1 update |
-| 04/22/2024 |  2.0          | Sprint 2 update  | 
-| 04/24/2024 | 3.0	     | Sprint 3 update  |
-
-
-
-# Overview
-The primary focus of the WAPH project revolves around creating an all-encompassing web application named "MiniFacebook." The development process of this web application incorporates comprehensive full-stack web development techniques and cybersecurity principles to ensure its resilience against potential vulnerabilities exploited by hackers. Our team, comprised of four classmates, collaboratively worked on the website's development. We primarily utilized WhatsApp for communication, supplemented by in-person meetings for discussions. Additionally, we employed collaborative note-taking tools accessible to all team members, facilitating project discussions, idea generation, and progress tracking.
-
-# User Interface
-## Front-End:
-### Edit & View Profile Feature:
-Users can view their profile, and  modify their full name, email, and phone number.
-### Change Password Option: 
-Users can change their password if facing any issues.
-### Posts Visibility Setting: 
-Upon logging in, users can view site's posted content 
-### Add posts : 
-Users have the ability to post content , edit and delete their own posts.
-### Add comments :
-Users can add comments on all the posts that are visibile to them.
-### Super users: 
-Only super users have access to a specific page called user management , where he can view all the registered users and edit their access to the application.
-## Back-End:
-### Database Creation: 
-Established a database with essential tables for the application.
-### Users Table: 
-Stores user information including full name, username, password, email, and phone number.
-### Posts Table: 
-Records posts from various users, containing fields like Post ID, Title, Content, Post Date, and Owner.
-### Database Integration: 
-Connected the database with the front end to save user inputs.
-Implementation
-
-# Security Analysis
-•	The whole application is deployed over HTTPS
-
-•	All the passwords are hashed before inserting into the database. 
-
-•	Added client side and server side validations in the applications
-
-•	All the user inputs are validated , and sanitized before being used or displayed in the code.
-
-•	Strict security validations are implemented and forced to enter values in the required formats to minimize XSS attacks.
-
-•	In the password management page a CSRF token is passed as a hidden parameter and validated at the server side to detect and counter CSRF attacks.
-
-•	All the SQL queries are run as prepared statements and values are binded before executing to minimize SQL injection attacks.
-
-•	Altered the user table to add two new columns one for super user and the other for enable_status of the account . Only the super users have the value 1 and default value is 0 . The super users can disable the access for other users to the application.
-
-
-# System Analysis
-
-During the initial phase that is for the sprint 0 of the project, we constructed the website utilizing the system configuration file, which was utilized and modified for the WAPH-team project file. The hosts file in the etc folder was updated with the public URL: [https://github.com/waph-team01/waph-teamproject](https://waph-team01.minifacebook.com/) alongside the IP address. 
-
-# Demo Screenshots of Sprint0
-
-![admin login](Images/Sprint0/admin.png)
-
-![Team01_Personal_Page](Images/Sprint0/personalpage.png)
-
-![test page of nakkantm](Images/Sprint0/Tulasiram1.png)
-
-![test page of rasalavh](Images/Sprint0/rasalavh1.png)
-
-![test page of rampudga](Images/Sprint0/rampudga1.jpeg)
-
-![test page of pashamsp](Images/Sprint0/pashamsp1.png)
-
-
-# Functional Requirements
-
-## Features for posting like images and texts: 
-Enabling users to create and share posts with images/texts.
-## Database setup: 
-Configuring database system for storing application data securely.
-## Notification add on:
-Implementing notification system for relevant user alerts.
-## Forms for authentication and user registration:  
-Implementing secure login and registration forms for user access.
-## Search functionality: 
-Enabling users to search for specific content within application.
-## Messaging features: 
-Integrating private messaging functionalities for user communication.
-
-# Non - Functional Requirements
-## Error handling: 
-Managing errors for smoother user experience and application stability.
-## Implementing security features: 
-Strengthening application security through implementation of various security measures.
-## Cookies:
-Utilizing cookies for managing session information and enhancing user experience.
-## Session information: 
-Handling session data to maintain user context and interactions.
-
-# Database:
-
-![tables which stores the data](https://github.com/waph-team01/waph-teamproject/assets/156159822/21a38ea6-5874-4150-ad10-ccef4cb45045)
-
-![user tables](https://github.com/waph-team01/waph-teamproject/assets/156159822/9bcdf0cb-0f5e-4777-a319-df8fc4b58437)
-
-
-## Scrum process
-
-### Sprint 0
-
-Duration: 03/22/2024-03/31/2024
-
-#### Completed Tasks: 
-
-1. Our team has successfully established both public and private repositories named "waph-teamproject" and "waph-team01.github.io" correspondingly.
-2. SSL certificates and keys for the team project have been generated.
-3. HTTPS has been configured within the local domain name to ensure secure communication.
-4. A database has been set up for the system.
-5. Individual home pages have been developed for all team members, and their respective lab files have been transferred to the team directory.
-6. Testing of the index.html page has been carried out, yielding the anticipated performance and functionality as observed during the tests.
-
-#### Contributions: 
-
-1. Tulasiram Nakkanaboina, 11 commits, 7 hours, contributed in generating the SSL keys and certificates. 
-2. Vihasith Rasala, 8 commits, 6 hours, contributed in documentation of README file and organizing the data.
-3. Grahika Rampudi, 8 commits, 7 hours, contributed in creating the personal page of our team which includes details of our team members.
-4. Sai Sandeep Pasham, 7 commits, 6 hours, contributed in creating the database-data.sql, index.html page which includes the details of admin login. 
-
-
-### Sprint 1
-
-Duration: 03/28/2024-04/01/2024
-
-#### Completed Tasks: 
-
-1.	Established the database according to the outlined criteria.
-2.	Developed both login and registration forms.
-3.	Executed fundamental features for authenticated users, such as password modification.
-
-
-#### Contributions: 
-
-1. Tulasiram Nakkanaboina, 11 commits, 7 hours, contributed in creating user registration and profile edit php files snd further developed index.php file
-2. Vihasith Rasala, 15 commits, 6 hours, contributed in documentation of
-README file and organizing the data. Created and developed logout php file. 
-3. Grahika Rampudi, 8 commits, 7 hours, contributed in creating and organizing the database and it’s implementation in back end of web application. 
-4. Sai Sandeep Pasham, 7 commits, 6 hours, contributed in creating the change password and login php files.
-
-# Sprint 1 Retrospection
-•	The main problem we faced for a team call is unmatched schedule of team members. We are usually doing our team meetings in late nights.
-•	Online calls didn’t meet the expected progress of the project, so we are making ourselves available for physical sessions which is difficult.
-•	Proper collaborative dashboards require premium subscriptions for third party applications.
-•	Sandbox doesn’t work properly which is a dot in a white page.
-•	Team members use different OS like MacOS or windows where it’s difficult to work in virtual machine setup if it’s a Macbook.
-
-### Sprint 2
-
-Duration: 04/15/2024-04/22/2024
-
-#### Completed Tasks: 
-
-1.Updated the database design and implemention to incorporate new posts,edits, deletion and user management access.
-2.Logged-in users can add a new post, and add a comment on any post
-3.Logged in users can edit their own post and the user cannot edit post of other users.
-
-
-#### Contributions: 
-
-1. Tulasiram Nakkanaboina, 22commits, 14 hours, contributed in creating usermanagement.php and updated index.php,  viewprofile,  edituser php files ,modified style.css to give new appearance to the application.
-2. Vihasith Rasala, 18 commits, 10hours, contributed in updating the Edituser.php, viewpost.php, addpost.php, and insertpost.php. 
-3. Grahika Rampudi, 19commits, 11 hours, contributed in updating the index.php, deletepost.php, edituser.php, database.php. 
-4. Sai Sandeep Pasham, 17 commits, 9 hours, contributed in updating addcomment.php , Insertpost.php, edituser.php, Index.php and documentation of README file and organizing the data.
-
-
-# Sprint 2 Retrospection
-•	The whole sprint went well we were able to achieve the targets we have set before the start of the sprint.
-•	All the team members have contributed equally for the project.
-•	Sometimes the team members had the time conflicts which has delayed the work a bit
-•	This sprint has been wonderful learning experience with the database and handling php code, though few team members have minimal knowledge over this topics.
-
-# Demo Screenshots:
-
-![login_page](https://github.com/waph-team01/waph-teamproject/assets/156159822/1807b504-311d-4dfb-a4e7-cbd3aa415f62)
-
-![Homepage where user can view all the posts](https://github.com/waph-team01/waph-teamproject/assets/156159822/dc8ee1e3-1136-4dd8-8b12-aaeb2309fa43)
-
-![usermanagement page](https://github.com/waph-team01/waph-teamproject/assets/156159822/2e5d3888-5a8a-4b87-8e3e-cf85ca9f5913)
-
-![only superusers can access the usermanagement page](https://github.com/waph-team01/waph-teamproject/assets/156159822/f1ed04d3-e1fb-4bb4-85ad-16ad3b51a2ba)
-
-![editpost page where user can edit the post](https://github.com/waph-team01/waph-teamproject/assets/156159822/6ecfface-258d-48e1-ae5f-1fdbf28e5815)
-
-![index.php page where user who created the post can edit or delete the post](https://github.com/waph-team01/waph-teamproject/assets/156159822/c936cb30-c896-4c45-b94b-558fda70a8e9)
-
-![Edituser profile page where user can edit information except the username ](https://github.com/waph-team01/waph-teamproject/assets/156159822/c231227e-e937-4506-8953-e2808df36d67)
-
-![Viewuser profile page where user information can be viewed and non editable](https://github.com/waph-team01/waph-teamproject/assets/156159822/3f1025d0-e14d-4434-8b3c-64b194ca7d3f)
-
-![Changepasswordform with instant input validations](https://github.com/waph-team01/waph-teamproject/assets/156159822/fe33f9dd-88c0-4205-b4d4-664d36b0ff97)
-
-![changepasswordform](https://github.com/waph-team01/waph-teamproject/assets/156159822/9631ceda-947a-42e7-9225-71415d257b9a)
-
-![Addnewpost page where user can add a post](https://github.com/waph-team01/waph-teamproject/assets/156159822/b01363de-3132-4eb5-b397-d601508bb3bd)
-
-![users table](https://github.com/waph-team01/waph-teamproject/assets/156159822/6918a29c-12a0-4e39-9507-f769220463a1)
-
-![post table](https://github.com/waph-team01/waph-teamproject/assets/156159822/98343b85-a8cf-4f25-ae7d-dbe5aa620951)
-
-![comments table](https://github.com/waph-team01/waph-teamproject/assets/156159822/e730e68b-310b-43d0-a4b3-b4d706fc6984)
-
-![CSRF detection if anti CSRF token is missing](https://github.com/waph-team01/waph-teamproject/assets/156159822/f707dde0-259b-4a6b-9859-bec3665aa7ef)
-
-![Redirecting to login page if session id is missing or cookie expired.](https://github.com/waph-team01/waph-teamproject/assets/156159822/43cda685-939c-42a9-acc0-5bf063b9d73d)
-
-
-
-
-# Appendix
-
-**1. updateuser.php**
-```PHP
+# Source code of TEAM-01 
+Below is the source code for all the files used to develop mini facebook final project
+## updateuser.php
+```php
 <?php 
 	require "database.php";
 	$username = $_POST["username"];
@@ -264,31 +22,11 @@ Duration: 04/15/2024-04/22/2024
 ?>
 <form action="form.php" method="GET">
     <button type="submit">Go back to login page</button>
-</form><?php 
-	require "database.php";
-	$username = $_POST["username"];
-	$fullName = $_POST["fullName"];
-	$email = $_POST["email"]; 
-	$password = $_POST["password"];
-	$phoneNumber = $_POST["phoneNumber"];
-	if(isset($username) && isset($password) && isset($fullName) && isset($email) && isset($phoneNumber)){
-		if(updateuser($username, $fullName, $email, $password, $phoneNumber)){
-			echo "Profile Update Succeeded";
- 		}else{
-			echo "Profile Update Failed!";
-		}
-	}
-	else{
-		echo "No username/password/email/phoneNumber/fullName provided!";
-	}
-?>
-<form action="form.php" method="GET">
-    <button type="submit">Go back to login page</button>
 </form>
-```
 
-**2. form.php
-```PHP
+```
+## form.php
+```php
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -302,14 +40,14 @@ Duration: 04/15/2024-04/22/2024
     <div class="card">
       <h1>TEAM 01 - WAPH</h1>
       <h2>Login</h2>
-      <form action="index.php" method="POST" class="form login" onsubmit="return validateForm()">
+      <form action="index.php" method="POST" class="form login">
         <div class="input-group">
           <label for="username">Username:</label>
-          <input type="text" class="text_field" name="username" id="username" placeholder="Enter your username" required>
+          <input type="text" class="text_field" name="username" id="username" placeholder="Enter your username">
         </div>
         <div class="input-group">
           <label for="password">Password:</label>
-          <input type="password" class="text_field" name="password" id="password" placeholder="Enter your password" required>
+          <input type="password" class="text_field" name="password" id="password" placeholder="Enter your password">
         </div>
         <button class="button" type="submit">Login</button>
       </form>
@@ -319,23 +57,12 @@ Duration: 04/15/2024-04/22/2024
       </div>
     </div>
   </div>
-  <script>
-    function validateForm() {
-      var username = document.getElementById("username").value;
-      var password = document.getElementById("password").value;
-
-      if (username == "" || password == "") {
-        alert("Please fill in all fields.");
-        return false;
-      }
-      return true;
-    }
-  </script>
 </body>
 </html>
+
 ```
-**3.addnewuser.php**
-```PHP
+## addnewuser.php
+```php
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -397,9 +124,10 @@ Duration: 04/15/2024-04/22/2024
 </div>
 </body>
 </html>
+
 ```
-**4.insertpost.php**
-```PHP
+## insertpost.php
+```php
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -433,10 +161,10 @@ Duration: 04/15/2024-04/22/2024
   </div>
 </body>
 </html>
-```
-**5. deletepost.php**
-```PHP
 
+```
+## deletepost.php
+```php
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -471,9 +199,10 @@ Duration: 04/15/2024-04/22/2024
   </div>
 </body>
 </html>
+
 ```
-**6. viewprofile.php**
-```PHP
+## viewprofile.php
+```php
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -535,10 +264,10 @@ Duration: 04/15/2024-04/22/2024
   </div>
 </body>
 </html>
-```
 
-**7. addpost.php**
-```PHP
+```
+## addpost.php
+```php
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -563,10 +292,10 @@ Duration: 04/15/2024-04/22/2024
   </div>
 </body>
 </html>
-```
 
-**8. sessionauthentication.php**
-```PHP
+```
+## sessionauthentication.php
+```php
 <?php
 session_set_cookie_params(15*60, "/", "waph-team01.minifacebook.com", TRUE, TRUE);
 session_start();
@@ -586,9 +315,10 @@ if ($_SESSION["browser"] !== $_SERVER["HTTP_USER_AGENT"]) {
     die();
 }
 ?>
+
 ```
- **9. edituser.php**
- ```PHP
+## edituser.php
+```php
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -702,11 +432,10 @@ if ($_SESSION["browser"] !== $_SERVER["HTTP_USER_AGENT"]) {
   </script>
 </body>
 </html>
+
 ```
-
- **10. addcomment.php**
-```PHP
-
+## addcomment.php
+```php
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -790,10 +519,10 @@ if ($_SESSION["browser"] !== $_SERVER["HTTP_USER_AGENT"]) {
   </div>
 </body>
 </html>
-```
 
-**11. registrationform.php**
-```PHP
+```
+## registrationform.php
+```php
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -903,10 +632,10 @@ if ($_SESSION["browser"] !== $_SERVER["HTTP_USER_AGENT"]) {
   </script>
 </body>
 </html>
-```
 
-**12.logout.php**
-```PHP
+```
+## logout.php
+```php
 <?php
 session_start();
 
@@ -916,9 +645,10 @@ if(isset($_SESSION['user_id'])) {
 header("Location: form.php");
 exit;
 ?>
+
 ```
-**13. database.php**
-```PHP
+## database.php
+```php
 <?php
 $mysqli = new mysqli('localhost', 'team01', 'Pa$$w0rd', 'waph_team');
 if ($mysqli->connect_errno) {
@@ -1012,12 +742,6 @@ function updatePost($postID, $postContent) {
 
 function deletePost($postID) {
     global $mysqli;
-    
-    $prepared_sql1 = "DELETE FROM comments WHERE postID = ?";
-    $stmt1 = $mysqli->prepare($prepared_sql1);
-    $stmt1->bind_param("i", $postID);
-    $stmt1->execute();
-
     $prepared_sql = "DELETE FROM posts WHERE postID = ?";
     $stmt = $mysqli->prepare($prepared_sql);
     $stmt->bind_param("i", $postID);
@@ -1033,9 +757,10 @@ function changeUserStatus($username, $status) {
 }
 
 ?>
+
 ```
-**14 changepasswordform.php**
-```PHP
+## changepasswordform.php
+```php
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1197,9 +922,10 @@ function changeUserStatus($username, $status) {
   </script>
 </body>
 </html>
+
 ```
-**15. index.php**
-```PHP
+## index.php
+```php
 <?php
 session_set_cookie_params(15*60, "/", "waph-team01.mini.facebook.com", TRUE, TRUE);
 session_start();
@@ -1340,6 +1066,7 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
       background-color: #45a049; /* Darker green on hover */
     }
 
+    /* Adjust home button color */
     button[type="submit"] {
       background-color: #4CAF50; /* Green */
       color: white;
@@ -1381,10 +1108,7 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
           <button type="submit">View/Edit Profile</button>
         </form> 
         <form id="usermanagementform" action="usermanagement.php" method="POST">
-            <button type="submit">User Management</button>
-        </form> 
-        <form id="socketio Chat" action="http://localhost:8080" method="POST">
-            <button type="submit">Broadcast Chat</button>
+        <button type="submit">User Management</button>
         </form> 
         <form id="logout" action="logout.php" method="POST">
           <button type="submit">Logout</button>
@@ -1452,10 +1176,10 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
   </div>
 </body>
 </html>
-```
 
-**16.changepassword.php**
-```PHP
+```
+## changepassword.php
+```php
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1555,10 +1279,10 @@ if ($_SESSION["browser"] != $_SERVER["HTTP_USER_AGENT"]) {
   </div>
 </body>
 </html>
-```
 
-**17. usermanagement.php**
-```PHP
+```
+## usermanagement.php
+```php
 <?php
 session_start();
 
@@ -1780,10 +1504,11 @@ if (isset($_POST['action']) && isset($_POST['username'])) {
   </div>
 </body>
 </html>
-```
 
-**18. updatepost.php**
-```PHP
+
+```
+## updatepost.php
+```php
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1819,11 +1544,10 @@ if (isset($_POST['action']) && isset($_POST['username'])) {
   </div>
 </body>
 </html>
+
 ```
-
-**19. editpost.php**
-```PHP
-
+## editpost.php
+```php
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1865,140 +1589,5 @@ if (isset($_POST['action']) && isset($_POST['username'])) {
   </div>
 </body>
 </html>
+
 ```
-**20. style.css **
-```CSS
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f0fff0;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.card {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 10px; 
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  width: 300px;
-}
-
-h2 {
-  margin-top: 0;
-  margin-bottom: 20px;
-  text-align: center;
-  color: #333333; 
-}
-
-.input-group {
-  margin-bottom: 20px;
-}
-
-label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #333333; 
-}
-
-.text_field {
-  width: calc(100% - 22px); 
-  padding: 10px;
-  border: 1px solid #cccccc; 
-  border-radius: 5px;
-}
-
-.button {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  background-color: #4caf50; 
-  color: #ffffff; 
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.button:hover {
-  background-color: #45a049; 
-}
-
-.registration-link {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.registration-link span {
-  margin-right: 5px;
-  color: #333333;
-}
-```
-
-**(i) database-account.sql**
-```SQL
-create database waph_team;
-
-CREATE USER7 'team01'@'localhost' IDENTIFIED BY 'Pa$$w0rd';
-GRANT ALL ON waph_team.* TO 'team01'@'localhost';
-```
-
-**(ii) database-data.sql code**
-
-```SQL
-drop table if exists `users`;
-
-create table users(
-  user_id INT AUTO_INCREMENT PRIMARY KEY,
-username varchar(50) ,
-password varchar(100) NOT NULL,
-  fullname varchar(100),
-  otheremail varchar(100),
-  phone varchar(10));
-drop table if exists `superusers`;
-CREATE TABLE superusers (
-    superuser_id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    username VARCHAR(255) UNIQUE NOT NULL,
-    password VARCHAR(255) NOT NULL
-);
-drop table if exists `messages`;
-CREATE TABLE messages (
-    message_id INT AUTO_INCREMENT PRIMARY KEY,
-    message TEXT NOT NULL,
-    user_id INT,
-    time_stamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES users(user_id)
-);
-drop table if exists `posts`;
-CREATE TABLE posts (
-    post_id INT AUTO_INCREMENT PRIMARY KEY,
-    post_type VARCHAR(50),
-    title varchar(100) NOT NULL,
-    user_id INT,
-  posttime varchar(100),
-    time_stamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES users(user_id)
-);
-drop table if exists `comments`;
-CREATE TABLE comments (
-    comment_id INT AUTO_INCREMENT PRIMARY KEY,
-    post_id INT,
-    user_id INT,
-    comment TEXT NOT NULL,
-    time_stamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (post_id) REFERENCES posts(post_id),
-    FOREIGN KEY (user_id) REFERENCES users(user_id)
-);
-LOCK tables `users` WRITE;
-INSERT INTO users(username,password) VALUES ('admin',md5('Pa$$w0rd'));
-INSERT INTO users(username,password) VALUES ('test',md5('Pa$$w0rd'));
-UNLOCK tables;
-```
-
